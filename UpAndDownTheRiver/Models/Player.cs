@@ -5,14 +5,16 @@ using System.Web;
 
 namespace UpAndDownTheRiver.Models
 {
-    public class Player : IPlayer
+    public class Player : IScore
     {
         String name;
         int gamesWon;
         int gamesPlayed;
         int score;
+        int bid;
+        int tricks;
 
-        public void addScore(int bid, int tricks)
+        public void addScore()
         {
             if(bid == tricks)
             {
@@ -76,6 +78,14 @@ namespace UpAndDownTheRiver.Models
             gamesWon++;
         }
 
-        
+        public void setBid(int bid)
+        {
+            this.bid = bid;
+        }
+
+        public void setTricks(int tricks)
+        {
+            this.tricks = tricks;
+        }
     }
 }
